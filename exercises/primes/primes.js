@@ -12,7 +12,7 @@
  */
 function greet(name, selector) {
     const greetingElement = document.querySelector(selector);
-    greetingElement.textContent = `Welcome, ${name}!`;
+    greetingElement.textContent = `Hello ${name}`;
 }
 
 
@@ -45,7 +45,7 @@ function isPrime(number) {
  */
 function printNumberInfo(number, selector) {
     const numberInfoElement = document.querySelector(selector);
-    const isPrimeMessage = isPrime(number) ? 'is prime' : 'is not prime';
+    const isPrimeMessage = isPrime(number) ? 'is a prime number' : 'is not a prime number';
     numberInfoElement.textContent = `${number} ${isPrimeMessage}`;
 }
 
