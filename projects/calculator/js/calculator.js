@@ -4,7 +4,7 @@
 
 var outputScreen;
 var clearOnEntry;
-
+var expression;
 
 /**
  * Display a digit on the `outputScreen`
@@ -12,45 +12,35 @@ var clearOnEntry;
  * @param {number} digit digit to add or display on the `outputScreen`
  */
 function enterDigit(digit) {
-    if (clearOnEntry) {
-        outputScreen.textContent = '';
-        clearOnEntry = false;
-    }
-    outputScreen.textContent += digit;
-    expression += digit;
+  document.querySelector("#result").innerText += digit;
+  expression += digit;
 }
-
 
 /**
  * Clear `outputScreen` and set value to 0
  */
 function clear_screen() {
-    outputScreen.textContent = '';
-    expression = '';
-    clearOnEntry = true;
+  document.querySelector("#result").innerText = "0" ;
+  expression =  ' ' ;
+  clearOnEntry = true;
 }
-
 
 /**
  * Evaluate the expression and display its result or *ERROR*
  */
 function eval_expr() {
-    try {
-        var result = eval(expression);
-        if (isNaN(result) || result === Infinity) {
-            outputScreen.textContent = 'ERROR';
-        } else {
-            outputScreen.textContent = result;
-        }
-        expression = result.toString();
-        clearOnEntry = true;
-    } catch (error) {
-        outputScreen.textContent = 'ERROR';
-        expression = '';
-        clearOnEntry = true;
-    }
+  try {
+    var result = eval(expression);
+    document.querySelector("#result").innerText = result;
+    expression = result.toString();
+    clearOnEntry = false;
+  } catch (error) {
+    document.querySelector("#result").innerText= 'ERROR';
+    expression = ' ';
+    
+    clearOnEntry = true;
+  }
 }
-
 
 /**
  * Display an operation on the `outputScreen`
@@ -58,16 +48,11 @@ function eval_expr() {
  * @param {string} operation to add to the expression
  */
 function enterOp(operation) {
-    if (clearOnEntry) {
-        outputScreen.textContent = '';
-        clearOnEntry = false;
-    }
-    outputScreen.textContent += operation;
+    document.querySelector("#result").innerText += operation;
     expression += operation;
-}
-
+  }
 
 window.onload = function () {
-    outputScreen = document.querySelector("#result");
-    clearOnEntry = true;
+  outputScreen = document.querySelector("#result")
+   clear_screen();
 };
