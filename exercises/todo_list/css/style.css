@@ -1,11 +1,16 @@
 .critical {
+    background-color: #ff0000; /* Red */
+    color: #ffffff; /* White text */
 }
-
 .important {
+    background-color: #ff9900; /* Orange */
+    color: #000000; /* Black text */
 }
-
 .normal {
+    background-color: #ffff00; /* Yellow */
+    color: #000000; /* Black text */
 }
-
 .low {
+    background-color: #00cc00; /* Green */
+    color: #ffffff; /* White text */
 }

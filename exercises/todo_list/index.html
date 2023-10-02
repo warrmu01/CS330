@@ -1,61 +1,67 @@
 <!DOCTYPE html>
-
-<head>
-    <title>TODO list</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body> 
-    <div class="container">
-        <h1>TODO List</h1>
+<html lang="en">
+    <head>
+        <title>TODO list</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body> 
         <div class="container">
-            <form id="newTask">
-            <div>
-                <div>
-                    <label for="title">Task</label>
-                    <input id="title" required />
-                </div>
-
-                <div>
-                    <label for="assignedTo">Assigned to</label>
-                    <select id="assignedTo"></select>
-                </div>
-
-                <div>
-                    <label for="priority">Priority</label>
-                    <select id="priority"></select>
-                </div>
-
-                <div>
-                    <label for="dueDate">Due date</label>
-                    <input id="dueDate" required />
-                </div>
+            <h1><div class="p-3 mb-2 bg-info text-white">TODO List</div></h1>
+                <form id="newTask" novalidate>
+                    <div class="row mt-3">
+                        <div class="col-sm-3 form-group">
+                            <label for="title">Task</label>
+                            <input id="title" class="form-control" id="validationCustom01"/>
+                            <div class="invalid-feedback">
+                                Please enter a task.
+                            </div>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="assignedTo">Assigned to</label>
+                            <select id="assignedTo" class="form-select mt-0">
+                            </select>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="priority">Priority</label>
+                           
+                            <select id="priority" class="form-select mt-0">
+                             
+                            </select>  
+                        </div>
+                        <div class="col-sm-3 form-group">
+                        <label for="dueDate">Due date</label>
+                        <input id="dueDate" class="form-control" type="date" id="validationCustom02" />
+                        <div class="invalid-feedback">
+                            Please enter a due date.
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <div class="d-grid gap-4">
+                        <button  class="btn btn-primary mt-3" type="button" id="addTaskBtn" onclick="if (document.getElementById('newTask').checkValidity()) {addTask()}">Add task</button>
+                    </div>
+                </form>
             </div>
-            <div>
-                <button type="button" id="addTaskBtn" onclick="addTask()">Add task</button>
-            </div>
-        </form>
-    </div>
-    </div>
-
-    <div class="container">
-        <table id="taskList">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Task</th>
-                    <th>Assigned to</th>
-                    <th>Priority</th>
-                    <th>Due date</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-    </div>
-
-    <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-</body>
-
+        </div>
+        <div class="container">
+            <table id="taskList" class="table table-bordered"> 
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Task</th>
+                        <th>Assigned to</th>
+                        <th>Priority</th>
+                        <th>Due date</th>
+                    </tr>
+                </thead>
+                <tbody id="newrow">
+                </tbody>
+            </table>
+        </div>
+        <div class="container" id="feedbackMessage"></div> 
+        <div class="container" id="closet"></div>
+        <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
 </html>
