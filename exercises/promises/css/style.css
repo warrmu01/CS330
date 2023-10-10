@@ -1,0 +1,23 @@
+.trivia {
+    background-color: skyblue;
+    margin-bottom: 15px;
+    margin-left: 200px;
+    height: 100px;
+    width: 600px;
+    padding-top: 10px;
+    padding-left: 10px;
+
+}
+
+.numbervalues{
+    margin-bottom: 15px;
+    height: 100px;
+    width: 100px;
+
+
+}
+
+.numbercontainer {
+    display: flex;
+}
+
