@@ -96,6 +96,7 @@ function displayRestaurantData(data, city, minRating) {
         if (filteredRestaurants.length === 0) {
     // No restaurants found
           foodResult.innerHTML = 'No restaurants found in the area.';
+          document.getElementById('map').style.display = 'none';
         } else {
           if (marker) {
             marker.setMap(null);
