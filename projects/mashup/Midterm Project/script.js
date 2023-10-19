@@ -56,6 +56,9 @@ async function searchForFood() {
 async function searchForRestaurants() {
     const city = document.getElementById('cityname').value;
     const minRating = parseFloat(document.getElementById('minrating').value);
+    const cusine = document.getElementById('cuisines');
+
+    console.log(JSON.stringify(cusine));
 
     loadingMessage.style.display = 'block';
 
@@ -173,11 +176,14 @@ function displayRestaurantData(data, city, minRating) {
                 loadingbutton.style.display = 'block';
                 restaurantInputs.style.display = 'none';
                 document.getElementById('map').style.display = 'none';
+                foodResult.style.display = 'none';
+
             } else if (this.value === 'restaurant') {
                 homeInputs.style.display = 'none';
                 loadingbutton.style.display = 'block';
                 restaurantInputs.style.display = 'block';
                 document.getElementById('map').style.display = 'block';
+                foodResult.style.display = 'none';
             }
             });
         });
