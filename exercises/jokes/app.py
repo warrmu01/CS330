@@ -25,9 +25,12 @@ def index_jokes():
         
         jokes = []
         try:
-            for _ in range(int(num_jokes)):
+            unique_jokes = set()
+            while len(jokes) < int(num_jokes):
                 joke = pyjokes.get_joke(language=language, category=category)
-                jokes.append(joke)
+                if joke not in unique_jokes:
+                    unique_jokes.add(joke)
+                    jokes.append(joke)
         except Exception as e:
             error_message = str(e)
             return render_template('base.html', languages=languages, categories=categories, numbers=numbers,  error_message=error_message, )
@@ -41,14 +44,14 @@ if __name__ == "__main__":
 
 def send_joke(
     language: str = "en", category: str = "all", number: int = 1) -> List[str]:
-    """Return a list of jokes"""
+    """Return a list of unique jokes"""
     if language == "es" and category == "chuck":
         return ["No kidding!"]
     else:
-        jokes = []
-        for x in range(number):
-            joke = pyjokes.get_joke(language=language, category=category)
-            jokes.append(joke)
+
+        all_jokes = pyjokes.get_jokes(language=language, category=category)
+        jokes = random.sample(all_jokes, min(number, len(all_jokes)))
     
     return jokes
+    
 
