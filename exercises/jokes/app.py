@@ -48,7 +48,7 @@ def send_joke(
     if language == "es" and category == "chuck":
         return ["No kidding!"]
     else:
-
+        
         all_jokes = pyjokes.get_jokes(language=language, category=category)
         jokes = random.sample(all_jokes, min(number, len(all_jokes)))
     
