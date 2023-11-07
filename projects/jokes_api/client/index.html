@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flask for Fun</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div><a href="/">Home</a></div>
+        <div>
+            <h2>Pick the category, language, and number of jokes to hear</h2>
+        </div>
+        <form method="POST">
+            <div class="row">
+                <div class="col-sm-3 form-group">
+                    <label for="category" value="Category">Category</label>
+                    <select name="category"  class="form-control" id="selCat">
+                    </select>
+                </div>
+                
+                <div class="col-sm-3 form-group">
+                    <label for="language" value="Language">Language</label>
+                    <select name="language" class="form-control" id="selLang">
+                    </select>
+                </div>
+                <div class="col-sm-3 form-group">
+                    <label for="number" value="Number">Number</label>
+                    <select  name="number" class="form-control" id="selNum">
+                    </select>
+                </div>
+                <div class="col-sm-3 form-group">
+                    <label for="id" value="id">Id</label>
+                    <input type="text" name="number" class="form-control" id="selid">
+                    </select>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <button type="submit" class="btn btn-primary mt-3" id="btnAmuse" value="Tell me a joke">Amuse me</button>
+                    <button type="submit" class="btn btn-primary mt-3" id="btnAmuse2" value="Tell me a joke">Want a specific joke!</button>
+                </div>
+            </div>
+        </form>
+        <p></p>
+        <div id="jokes">
+           
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
