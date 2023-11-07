@@ -1,7 +1,7 @@
 'use strict';
 
-var apiUrl = 'http://localhost:5000/api/v1/jokes';
-var apiUrl2 = 'http://localhost:5000/api/v1/jokes/';
+var apiUrl = 'https://mugheeswarraich11.pythonanywhere.com/api/v1/jokes';
+var apiUrl2 = 'https://mugheeswarraich11.pythonanywhere.com/api/v1/jokes/';
 
 // Populate the category select element
 var selCat = document.getElementById('selCat');
