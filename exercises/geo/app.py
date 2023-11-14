@@ -13,11 +13,11 @@ def get_data_from_db(query: str, host: str = "localhost", port: int = 2345, user
 
     try:
         rows = db.query(query)
-        rows.all()  # Ensure that the query is fully executed
-        return rows.all()  # Return the results
+        rows.all()  
+        return rows.all()  
     except Exception as e:
         print(f"Error executing query: {e}")
-        raise  # Re-raise the exception
+        raise 
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -65,7 +65,6 @@ def index():
 def search(scope: str):
     if scope == "country":
         # get countries from the database and populate options of the drop-down menu
-        # raise NotImplementedError
         results = get_data_from_db(
             host="localhost",
             port=2345,
@@ -77,7 +76,6 @@ def search(scope: str):
         
     elif scope == "region":
         # get regions from the database and populate options of the drop-down menu
-        # raise NotImplementedError
         results = get_data_from_db(
             host="localhost",
             port=2345,
@@ -90,7 +88,6 @@ def search(scope: str):
        
     elif scope == "continent":
         # get continents from the database and populate options of the drop-down menu
-        # raise NotImplementedError
         results = get_data_from_db(
             host="localhost",
             port=2345,
