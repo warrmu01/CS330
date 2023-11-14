@@ -56,7 +56,7 @@ def index():
                 port=2345,
                 user="warrmu01",
                 dbname="world",
-                query=f"select * from country where continent = '{continent}';",
+                query=f"select * from country where continent = '{continent}' AND population > 0;",
             )
             return render_template("continent.html", rows=results)
         return "Invalid form submission"
