@@ -1,1 +1,60 @@
 {% extends "base.html" %}
+
+{% block content %}
+
+<div class="mui-col"><a href="/country">Country Info</a></div>
+<div class="mui-col"><a href="/region">Region Info</a></div>
+<div class="mui-col"><a href="/continent">Continent Info</a></div>
+<div class="mui-container">
+    <h1>Find Information</h1>
+    <form action="/" method="POST" class="mui-form">
+        <div class="mui-row">
+            <div class="mui-col">
+                <div class="mui-select">
+                    <select id="selCountry" name="selcountry">
+                        {% for o in options %}
+                        <option value="{{o[1]}}">{{o[0]}}</option>
+                        {% endfor %}
+                    </select>
+                    <label>Pick a Country</label>
+                </div>
+            </div>
+            <div class="mui-col">
+                <input id="btnInfo" type="submit" class="mui-btn
+                mui-btn--primary" value="Get Info!">
+            </div>
+        </div> 
+        
+<div class="mui-container">
+    <table id="information" class="mui-table mui-table--bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Continent</th>
+                <th>Region</th>
+                <th>Area</th>
+                <th>Population</th>
+                <th>Government</th>
+                <th>Head</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for r in rows %}
+            <tr>
+                <td>{{ r[1] }}</td>
+                <td>{{ r[2] }}</td>
+                <td>{{ r[3] }}</td>
+                <!-- <td>{{ r[1] }}</td> -->
+                <td>{{ r[4] }}</td>
+                <td>{{ r[6] }}</td>
+                <td>{{ r[11] }}</td>
+                <td>{{ r[12] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+  
+</div>
+
+
+{% endblock %}
