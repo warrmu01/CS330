@@ -1,0 +1,76 @@
+<!-- base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    </head>
+<style>
+    /* Add a custom style to control the container layout */
+    .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    /* Add a custom style to control the product card */
+    .product-card {
+        border-radius: 8px;
+        margin: 10px;
+    }
+
+    /* Add a custom style to control the image size */
+    .product-card img {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 8px 8px 0 0;
+    }
+
+    /* Add a custom style for the header */
+    .header {
+        background-color: #f8f9fa;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        background-color: black;
+    }
+    .row{
+        display: flex;
+    }
+    div#nav {
+        margin-left: 600px;
+        margin-top: 15px;
+    }   
+    .col-md-4 {
+        margin-bottom: 10px;
+    }
+    h1 {
+    color: white;
+    }
+</style>
+<body>
+    <!-- Header Section -->
+    <div class="container">
+        <div class="header">
+            <h1>Mughees's Market</h1>
+            <div id="nav">
+                <a class="btn btn-primary" href="{{ url_for('admin_dashboard') }}">Admin Dashboard</a>
+                <a class="btn btn-primary" href="{{ url_for('show_product') }}">Home</a>
+                <a class="btn btn-success" href="{{ url_for('view_cart') }}">Cart</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Section (to be extended by child templates) -->
+    <div class="container mt-4">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Include Bootstrap JS and dependencies if needed -->
+    <!-- Add your common scripts or links here -->
+</body>
+</html>

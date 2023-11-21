@@ -1,0 +1,8 @@
+id,item,available,species,price,image_url,quantity
+1,Pork,yes,Pig,$10,images/pork.jpeg,10
+2,Chicken,yes,Hen,$8,images/chicken.webp,15
+3,Beef,yes,Cow,$12,images/beef.jpeg,10
+4,Eggs,no,Hen,$5,images/eggs.jpeg,20
+5,Milk,yes,Cow,$4,images/milk.jpeg,25
+6,Butter,yes,Cow,$8,images/butter.jpeg,24
+7,Honey,no,Bees,$10,images/honey.jpeg,20

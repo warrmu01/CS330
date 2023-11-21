@@ -1,0 +1,42 @@
+<!-- add_product.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container mt-4">
+    <h2>Add New Product</h2>
+    <form method="post" action="{{ url_for('add_product') }}" enctype="multipart/form-data">
+      <!-- Add form fields for adding a new product -->
+      <div class="mb-3">
+        <label for="item" class="form-label">Item:</label>
+        <input type="text" class="form-control" id="item" name="item" required>
+      </div>
+      <!-- Use a select dropdown for the Available field -->
+      <div class="mb-3">
+        <label for="available" class="form-label">Available:</label>
+        <select name="available" class="form-select">
+          <option value="Yes" selected>Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="species" class="form-label">Species:</label>
+        <input type="text" class="form-control" id="species" name="species" required>
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Price:</label>
+        <input type="text" class="form-control" id="price" name="price" required>
+      </div>
+      <!-- Add quantity field -->
+      <div class="mb-3">
+        <label for="quantity" class="form-label">Quantity:</label>
+        <input type="number" class="form-control" id="quantity" name="quantity" value="1" min="1">
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Image:</label>
+        <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Add Product</button>
+    </form>
+  </div>
+{% endblock %}
