@@ -1,38 +1,37 @@
-<!-- index.html -->
-
 {% extends 'base.html' %}
 
 {% block content %}
+  <div class="container mt-4">
+    <h2>Product Catalog</h2>
     <div class="row">
-        {% for product in market %}
-        <div class="col-md-4">
-            <div class="card product-card">
-                {% if not product.image_url.startswith('images/') %}
-                    <!-- Check if the image URL doesn't start with 'images/' and add it -->
-                    <img src="{{ url_for('static', filename='images/' + product.image_url) }}" class="card-img-top" alt="{{ product.item }} Image">
-                {% else %}
-                    <!-- Image URL already starts with 'images/' -->
-                    <img src="{{ url_for('static', filename=product.image_url) }}" class="card-img-top" alt="{{ product.item }} Image">
-                {% endif %}
-                <div class="card-body">
-                    <h5 class="card-title">{{product.item}}</h5>
-                    <p class="card-text">Available: {{product.available}}</p>
-                    <p class="card-text">Species: {{product.species}}</p>
-                    <p class="card-text">In Stock: {{product.quantity}}</p>
-                    <p class="card-text">Price: {{product.price}}</p>
-                    <!-- Add to Cart button with quantity input -->
-                    <form action="{{ url_for('add_to_cart', product_id=product.an_id) }}" method="post">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="quantity">Quantity</label>
-                            </div>
-                            <input type="number" class="form-control" id="quantity" name="quantity" value="1" min="1" max="{{ product.quantity }}">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Add to Cart</button>
-                    </form>
-                </div>
+      {% for product in market %}
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            {% if product.image_url %}
+              <!-- If the product has an image URL, display the image -->
+              <img src="{{ product.image_url }}" class="card-img-top" alt="{{ product.item }}">
+            {% else %}
+              <!-- If the product doesn't have an image URL, use a default image-->
+              <img src="{{ url_for('static', filename=product.image_url) }}" class="card-img-top" alt="{{ product.item }} Image">            {% endif %}
+            <div class="card-body">
+              <h5 class="card-title">{{ product.item }}</h5>
+              <p class="card-text">Price: ${{ product.price }}</p>
+              <p class="card-text">Available: {{ product.available }}</p>
+              <p class="card-text">Species: {{ product.species }}</p>
+              <p class="card-text">Quantity: {{ product.quantity }}</p>
             </div>
+            <form action="{{ url_for('add_to_cart', product_id=product.an_id) }}" method="post">
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                      <label class="input-group-text" for="quantity">Quantity</label>
+                  </div>
+                  <input type="number" class="form-control" id="quantity" name="quantity" value="1" min="1" max="{{ product.quantity }}">
+              </div>
+              <button type="submit" class="btn btn-primary">Add to Cart</button>
+          </form>
+          </div>
         </div>
-        {% endfor %}
+      {% endfor %}
     </div>
+  </div>
 {% endblock %}

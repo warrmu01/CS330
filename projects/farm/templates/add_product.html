@@ -1,17 +1,13 @@
-<!-- add_product.html -->
-
 {% extends 'base.html' %}
 
 {% block content %}
   <div class="container mt-4">
     <h2>Add New Product</h2>
     <form method="post" action="{{ url_for('add_product') }}" enctype="multipart/form-data">
-      <!-- Add form fields for adding a new product -->
       <div class="mb-3">
         <label for="item" class="form-label">Item:</label>
         <input type="text" class="form-control" id="item" name="item" required>
       </div>
-      <!-- Use a select dropdown for the Available field -->
       <div class="mb-3">
         <label for="available" class="form-label">Available:</label>
         <select name="available" class="form-select">
@@ -27,15 +23,15 @@
         <label for="price" class="form-label">Price:</label>
         <input type="text" class="form-control" id="price" name="price" required>
       </div>
-      <!-- Add quantity field -->
       <div class="mb-3">
         <label for="quantity" class="form-label">Quantity:</label>
         <input type="number" class="form-control" id="quantity" name="quantity" value="1" min="1">
       </div>
       <div class="mb-3">
-        <label for="image" class="form-label">Image:</label>
-        <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
+        <label for="image_url" class="form-label">Image URL:</label>
+        <input type="text" class="form-control" id="image_url" name="image_url" required>
       </div>
+  
       <button type="submit" class="btn btn-primary">Add Product</button>
     </form>
   </div>

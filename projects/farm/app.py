@@ -1,14 +1,21 @@
 #!/usr/bin/env python3
 """Simple Flask app"""
-from flask import render_template, request, jsonify, json
+from flask import render_template, request
 from flask import render_template, abort
 from models import Product, ProductSchema
 from flask import redirect, url_for, session
 import os
-from flask import request
+from flask import request, flash
 from werkzeug.utils import secure_filename
 
 from config import app, db
+
+
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
 @app.route("/")
@@ -18,10 +25,6 @@ def show_product():
     productSchema = ProductSchema(many=True)
     return render_template("index.html", market=productSchema.dump(market))
 
-# ...
-
-# ...
-# ... (your existing code)
 
 @app.route('/add_to_cart/<int:product_id>', methods=['POST', 'GET'])
 def add_to_cart(product_id):
@@ -67,13 +70,6 @@ def add_to_cart(product_id):
     return render_template('cart.html', product=product)
 
 
-# ...
-
-# ...
-
-
-
-
 
 @app.route('/view_cart')
 def view_cart():
@@ -83,7 +79,6 @@ def view_cart():
     # Render a template to display the cart
     return render_template('cart.html', cart_items=cart)
 
-# ... (your existing code)
 
 @app.route('/update_cart_quantity/<int:product_id>', methods=['POST'])
 def update_cart_quantity(product_id):
@@ -111,9 +106,6 @@ def update_cart_quantity(product_id):
     # Redirect to the cart page
     return redirect(url_for('view_cart'))
 
-# ... (your existing code)
-
-
 
 @app.route("/admin_dashboard")
 def admin_dashboard():
@@ -134,7 +126,6 @@ def edit_product(product_id):
         product.price = request.form['price']
         product.quantity = request.form['quantity']
 
-        
         # Commit the changes to the database
         db.session.commit()
         
@@ -154,20 +145,6 @@ def delete_product(product_id):
     # Redirect to the admin dashboard after deletion
     return redirect(url_for('admin_dashboard'))
 
-import os
-from flask import request, flash
-from werkzeug.utils import secure_filename
-
-# ...
-
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
-
-def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
-from flask import flash
-
-# ...
 
 @app.route("/add_product", methods=["GET", "POST"])
 def add_product():
@@ -177,7 +154,7 @@ def add_product():
         available = request.form.get("available")
         species = request.form.get("species")
         price = request.form.get("price")
-        quantity = request.form.get("quantity") 
+        quantity = request.form.get("quantity")
 
         # Validate that the quantity is a positive integer
         try:
@@ -188,47 +165,30 @@ def add_product():
             flash('Invalid quantity. Please enter a positive integer.')
             return redirect(request.url)
 
-        # Check if the post request has the file part
-        if 'image' not in request.files:
-            # No file part in the request
-            flash('No file part')
+        # Check if the user provided an image URL
+        image_url = request.form.get("image_url")
+
+        if not image_url:
+            flash('Image URL is required.')
             return redirect(request.url)
 
-        file = request.files['image']
+        # Create a new product and add it to the database with the image URL
+        new_product = Product(
+            item=item,
+            available=available,
+            species=species,
+            price=price,
+            quantity=quantity,
+            image_url=image_url  # Use the provided image URL
+        )
+        db.session.add(new_product)
+        db.session.commit()
 
-        # If the user does not select a file, browser also
-        # submit an empty part without filename
-        if file.filename == '':
-            flash('No selected file')
-            return redirect(request.url)
-
-        # Check if the file is allowed
-        if file and allowed_file(file.filename):
-            # Secure the filename to prevent malicious files
-            filename = secure_filename(file.filename)
-
-            # Save the file to the uploads folder
-            file.save(os.path.join(app.config['static_folder'], 'images', filename))
-
-            # Create a new product and add it to the database
-            new_product = Product(
-                item=item,
-                available=available,
-                species=species,
-                price=price,
-                quantity=quantity,  # Added quantity to the new product
-                image_url=filename
-            )
-            db.session.add(new_product)
-            db.session.commit()
-
-            # Redirect to the admin dashboard
-            return redirect(url_for("admin_dashboard"))
+        # Redirect to the admin dashboard
+        return redirect(url_for("admin_dashboard"))
 
     return render_template("add_product.html")
 
-
-# ...
 
 @app.route('/remove_all_from_cart', methods=['POST'])
 def remove_all_from_cart():
@@ -253,10 +213,6 @@ def remove_all_from_cart():
     # Redirect to the cart page
     return redirect(url_for('view_cart'))
 
-# ...
-
-
-# ...
 
 @app.route('/remove_from_cart/<int:product_id>', methods=['POST'])
 def remove_from_cart(product_id):
@@ -272,7 +228,7 @@ def remove_from_cart(product_id):
 
         # Update the quantity in the database
         product = Product.query.get_or_404(product_id)
-        product.quantity += item_to_remove['quantity']  # Add back the removed quantity
+        product.quantity += item_to_remove['quantity']  
 
         # Commit the changes to the database
         db.session.commit()
@@ -282,8 +238,6 @@ def remove_from_cart(product_id):
 
     # Redirect to the cart page
     return redirect(url_for('view_cart'))
-
-# ...
 
 
 if __name__ == "__main__":

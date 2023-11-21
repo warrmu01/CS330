@@ -1,8 +1,8 @@
 id,item,available,species,price,image_url,quantity
-1,Pork,yes,Pig,$10,images/pork.jpeg,10
-2,Chicken,yes,Hen,$8,images/chicken.webp,15
-3,Beef,yes,Cow,$12,images/beef.jpeg,10
-4,Eggs,no,Hen,$5,images/eggs.jpeg,20
-5,Milk,yes,Cow,$4,images/milk.jpeg,25
-6,Butter,yes,Cow,$8,images/butter.jpeg,24
-7,Honey,no,Bees,$10,images/honey.jpeg,20
+1,Pork,yes,Pig,$10,https://omnivorescookbook.com/wp-content/uploads/2022/09/220908_Air-Fryer-Char-Siu-Pork_550-500x500.jpg, 10
+2,Chicken,yes,Hen,$8,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5HR0j-VVAVntxH0_LtaxavPvXH6jtwzGDG6c_Vh1K2BliMS4kwzRTMXNxcLwg5XI4zNI&usqp=CAU, 15
+3,Beef,yes,Cow,$12,https://faithfamilyandbeef.com/wp-content/uploads/2019/02/Ridiculously-Tasty-Beef-Tenderloin-3-scaled.jpg, 10
+4,Eggs,no,Hen,$5,https://cdn.britannica.com/94/151894-050-F72A5317/Brown-eggs.jpg, 20
+5,Milk,yes,Cow,$4,https://images.immediate.co.uk/production/volatile/sites/30/2020/02/Glass-and-bottle-of-milk-fe0997a.jpg?quality=90&resize=556,505, 25
+6,Butter,yes,Cow,$8,https://www.southernliving.com/thmb/JOV1II4ho49bEI50Drk4RDtDK1Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/How_To_Soften_Butter_013-2000-61e8b4e1ad9c431887472483ae714dbb.jpg, 24
+7,Honey,no,Bees,$10,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVHrtQm3Jy6xnIMKKPNqk540IFTsds4Qf29exISPyYh5BmCWKaQ3afcOgHRfLk2rPjP6A&usqp=CAU, 20

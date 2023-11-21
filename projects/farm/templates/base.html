@@ -9,20 +9,19 @@
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     </head>
 <style>
-    /* Add a custom style to control the container layout */
+
     .product-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
     }
 
-    /* Add a custom style to control the product card */
+
     .product-card {
         border-radius: 8px;
         margin: 10px;
     }
 
-    /* Add a custom style to control the image size */
     .product-card img {
         height: 200px;
         width: 100%;
@@ -30,7 +29,6 @@
         border-radius: 8px 8px 0 0;
     }
 
-    /* Add a custom style for the header */
     .header {
         background-color: #f8f9fa;
         padding: 20px;
@@ -65,12 +63,8 @@
         </div>
     </div>
 
-    <!-- Content Section (to be extended by child templates) -->
     <div class="container mt-4">
         {% block content %}{% endblock %}
     </div>
-
-    <!-- Include Bootstrap JS and dependencies if needed -->
-    <!-- Add your common scripts or links here -->
 </body>
 </html>
