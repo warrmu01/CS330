@@ -7,7 +7,13 @@
         {% for product in market %}
         <div class="col-md-4">
             <div class="card product-card">
-                <img src="{{ url_for('static', filename=product.image_url) }}" class="card-img-top" alt="{{ product.item }} Image">
+                {% if not product.image_url.startswith('images/') %}
+                    <!-- Check if the image URL doesn't start with 'images/' and add it -->
+                    <img src="{{ url_for('static', filename='images/' + product.image_url) }}" class="card-img-top" alt="{{ product.item }} Image">
+                {% else %}
+                    <!-- Image URL already starts with 'images/' -->
+                    <img src="{{ url_for('static', filename=product.image_url) }}" class="card-img-top" alt="{{ product.item }} Image">
+                {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{product.item}}</h5>
                     <p class="card-text">Available: {{product.available}}</p>

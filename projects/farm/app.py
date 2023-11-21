@@ -177,7 +177,7 @@ def add_product():
         available = request.form.get("available")
         species = request.form.get("species")
         price = request.form.get("price")
-        quantity = request.form.get("quantity")  # Added line to get quantity
+        quantity = request.form.get("quantity") 
 
         # Validate that the quantity is a positive integer
         try:
@@ -208,7 +208,7 @@ def add_product():
             filename = secure_filename(file.filename)
 
             # Save the file to the uploads folder
-            file.save(os.path.join(app.config['static_folder'], filename))
+            file.save(os.path.join(app.config['static_folder'], 'images', filename))
 
             # Create a new product and add it to the database
             new_product = Product(
