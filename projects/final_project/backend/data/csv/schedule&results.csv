@@ -1,0 +1,130 @@
+Parent Index,Date,Away Team,Away Team Score,Home Team,Home Team Score,Location,Is Final
+0,2023-09-01,Augustana (Ill.),0,Simpson,4,"Indianola, Iowa",True
+0,2023-09-01,Nebraska Wesleyan,2,Lake Forest,0,"Colorado Springs, Colo.",True
+0,2023-09-01,Milwaukee School of Engineering,2,Wartburg,3,"Waverly, Iowa",True
+0,2023-09-01,Coe,0,Grinnell,2,"Grinnell, Iowa",True
+0,2023-09-01,Cornell,1,Luther,1,"Decorah, Iowa",True
+0,2023-09-01,Monmouth,0,Loras,6,"Dubuque, Iowa",True
+0,2023-09-01,Bethany Lutheran,3,Buena Vista,0,"Storm Lake, Iowa",True
+1,2023-09-02,Concordia (Minn.),2,Dubuque,1,"Dubuque, Iowa",True
+1,2023-09-02,Central,2,Westminster (Mo.),0,"Fulton, Mo.",True
+2,2023-09-03,Macalester,4,Simpson,2,"Indianola, Iowa",True
+2,2023-09-03,Concordia (Minn.),1,Loras,4,"Dubuque, Iowa",True
+2,2023-09-03,Nebraska Wesleyan,2,Pacific Lutheran,2,"Colorado Springs, Colo.",True
+2,2023-09-03,Wartburg,4,Cornell,0,"Mount Vernon, Iowa",True
+2,2023-09-03,Milwaukee School of Engineering,4,Dubuque,0,"Dubuque, Iowa",True
+3,2023-09-04,Central,4,Greenville (Ill.),1,"Greenville, Ill.",True
+3,2023-09-04,Northland,0,Loras,4,"Dubuque, Iowa",True
+4,2023-09-05,St. Scholastica,0,Wartburg,3,"Waverly, Iowa",True
+4,2023-09-05,Buena Vista,0,North Central (Minn.),2,"Minneapolis, Minn.",True
+4,2023-09-05,Dubuque,3,Grinnell,0,"Grinnell, Iowa",True
+4,2023-09-05,Luther,0,Wisconsin-Platteville,3,"Platteville, Wis.",True
+5,2023-09-06,Dordt (Iowa),1,Nebraska Wesleyan,2,"Lincoln, Neb.",True
+6,2023-09-07,Buena Vista,1,Northwestern (Minn.),1,"St. Paul, Minn.",True
+6,2023-09-07,Cornell,1,Coe,1,"Cedar Rapids, Iowa",True
+7,2023-09-08,Spurgeon College,1,Coe,8,"Cedar Rapids, Iowa",True
+7,2023-09-08,Illinois College,1,Simpson,2,"Indianola, Iowa",True
+7,2023-09-08,Westminster (Mo.),0,Nebraska Wesleyan,5,"Lincoln, Neb.",True
+7,2023-09-08,Viterbo (Wis.),1,Luther,1,"Decorah, Iowa",True
+7,2023-09-08,Gustavus Adolphus,1,Loras,1,"Dubuque, Iowa",True
+7,2023-09-08,Saint John's,2,Dubuque,0,"Dubuque, Iowa",True
+7,2023-09-08,Macalester,1,Wartburg,1,"Waverly, Iowa",True
+8,2023-09-09,Grinnell,1,Central,1,"Pella, Iowa",True
+8,2023-09-09,Buena Vista,1,Martin Luther,2,"New Ulm, Minn.",True
+8,2023-09-09,Saint Mary's (Minn.),2,Simpson,1,"Indianola, Iowa",True
+8,2023-09-09,St. John's,1,Loras,1,"Dubuque, Iowa",True
+8,2023-09-09,Gustavus Adolphus,3,Dubuque,0,"Dubuque, Iowa",True
+9,2023-09-10,Nebraska Wesleyan,2,Concordia (Minn.),1,"Moorhead, Minn.",True
+9,2023-09-10,Wartburg,1,Knox,0,"Galesburg, Ill.",True
+9,2023-09-10,Luther,0,Macalester,3,"St. Paul, Minn.",True
+9,2023-09-10,Benedictine,3,Coe,2,"Cedar Rapids, Iowa",True
+9,2023-09-10,Central,2,Augustana (Ill.),0,"Rock Island, Ill.",True
+10,2023-09-11,Monmouth,0,Coe,2,"Cedar Rapids, Iowa",True
+11,2023-09-13,Dubuque,1,Wheaton (Ill.),3,"Wheaton, Ill.",True
+11,2023-09-13,Loras,1,Carroll,0,"Waukesha, Wis.",True
+11,2023-09-13,Cornell,0,Simpson,3,"Indianola, Iowa",True
+11,2023-09-13,Wisconsin-Whitewater,0,Luther,0,"Decorah, Iowa",True
+12,2023-09-14,Buena Vista,5,Maranatha Baptist,1,"Watertown, Wis.",True
+12,2023-09-14,Illinois College,4,Coe,6,"Cedar Rapids, Iowa",True
+13,2023-09-15,Grinnell,0,Nebraska Wesleyan,2,"Lincoln, Neb.",True
+13,2023-09-15,Wartburg,0,North Park,0,"Chicago, Ill.",True
+14,2023-09-16,Buena Vista,1,Ripon,4,"Ripon, Wis.",True
+14,2023-09-16,Luther,1,Dominican (Ill.),0,"River Forest, Ill.",True
+14,2023-09-16,Simpson,2,Knox,4,"Galesburg, Ill.",True
+14,2023-09-16,Dordt,0,Central,0,"Pella, Iowa",True
+14,2023-09-16,Carroll,2,Dubuque,3,"Dubuque, Iowa",True
+14,2023-09-16,Wheaton (Ill.),2,Loras,0,"Dubuque, Iowa",True
+15,2023-09-17,Cornell,0,Nebraska Wesleyan,4,"Lincoln, Neb.",True
+16,2023-09-18,Buena Vista,1,Edgewood,3,"Madison, Wis.",True
+16,2023-09-18,Ripon,1,Coe,3,"Cedar Rapids, Iowa",True
+17,2023-09-19,Central,1,Macalester (Minn.),2,"St. Paul, Minn.",True
+17,2023-09-19,Wartburg,0,Wisconsin-Platteville,0,"Platteville, Wis.",True
+18,2023-09-20,Simpson,0,Carleton,6,"Northfield, Minn.",True
+18,2023-09-20,Luther,0,St. Olaf,7,"Northfield, Minn.",True
+18,2023-09-20,Blackburn,1,Buena Vista,1,"Storm Lake, Iowa",True
+18,2023-09-20,Dubuque,3,Elmhurst,3,"Elmhurst, Ill.",True
+18,2023-09-20,Wisconsin-Whitewater,3,Loras,3,"Dubuque, Iowa",True
+19,2023-09-23,Nebraska Wesleyan,0,Luther,2,"Decorah, Iowa",True
+19,2023-09-23,Buena Vista,0,Loras,6,"Dubuque, Iowa",True
+19,2023-09-23,Dubuque,0,Wartburg,3,"Waverly, Iowa",True
+19,2023-09-23,Knox,0,Coe,0,"Cedar Rapids, Iowa",True
+20,2023-09-24,Nebraska Wesleyan,1,Saint Mary's (Minn.),1,"Winona, Minn.",True
+20,2023-09-24,Central,1,Simpson,3,"Indianola, Iowa",True
+20,2023-09-24,Loras,2,Dominican (Ill.),0,"River Forest, Ill.",True
+21,2023-09-25,Wartburg,0,Wisconsin-Whitewater,0,"Whitewater, Wis.",True
+22,2023-09-26,Simpson,0,Wisconsin-Eau Claire,5,"Eau Claire, Wis.",True
+22,2023-09-26,Central,0,Cornell,3,"Pella, Iowa",True
+22,2023-09-26,Augustana (Ill.),0,Coe,3,"Cedar Rapids, Iowa",True
+23,2023-09-28,Central,7,Eureka (Ill.),0,"Eureka, Ill.",True
+24,2023-09-29,Simpson,0,Wisconsin-Platteville,4,"Platteville, Wis.",True
+25,2023-09-30,Coe,0,Wartburg,4,"Waverly, Iowa",True
+25,2023-09-30,Dubuque,3,Central,2,"Pella, Iowa",True
+25,2023-09-30,Luther,4,Buena Vista,0,"Storm Lake, Iowa",True
+25,2023-09-30,Loras,1,Nebraska Wesleyan,2,"Lincoln, Neb.",True
+26,2023-10-02,Augsburg,0,Luther,1,"Decorah, Iowa",True
+27,2023-10-03,Wisconsin-Platteville,1,Loras,1,"Dubuque, Iowa",True
+28,2023-10-04,Buena Vista,0,Central,4,"Pella, Iowa",True
+28,2023-10-04,Wartburg,0,Nebraska Wesleyan,0,"Lincoln, Neb.",True
+28,2023-10-04,Luther,2,Simpson,1,"Indianola, Iowa",True
+28,2023-10-04,Coe,0,Dubuque,1,"Dubuque, Iowa",True
+29,2023-10-06,Central,1,Wis.-Platteville,3,"Platteville, Wis.",True
+30,2023-10-07,Wartburg,0,Luther,0,"Decorah, Iowa",True
+30,2023-10-07,Simpson,4,Buena Vista,2,"Storm Lake, Iowa",True
+30,2023-10-07,Nebraska Wesleyan,1,Coe,4,"Cedar Rapids, Iowa",True
+30,2023-10-07,Dubuque,1,Loras,3,"Dubuque, Iowa",True
+31,2023-10-10,Wisconsin-Eau Claire,2,Dubuque,0,"Dubuque, Iowa",True
+31,2023-10-10,Central,2,Luther,0,"Decorah, Iowa",True
+31,2023-10-10,Coe,3,Buena Vista,0,"Storm Lake, Iowa",True
+31,2023-10-10,Loras,2,Wartburg,0,"Waverly, Iowa",True
+31,2023-10-10,Nebraska Wesleyan,1,Simpson,2,"Indianola, Iowa",True
+32,2023-10-13,Dordt (Iowa),2,Buena Vista,2,"Storm Lake, Iowa",True
+33,2023-10-14,Wartburg,1,Central,0,"Pella, Iowa",True
+33,2023-10-14,Nebraska Wesleyan,2,Dubuque,2,"Dubuque, Iowa",True
+33,2023-10-14,Simpson,5,Loras,2,"Dubuque, Iowa",True
+33,2023-10-14,Luther,2,Coe,1,"Cedar Rapids, Iowa",True
+34,2023-10-15,Buena Vista,1,Grinnell,5,"Grinnell, Iowa",True
+34,2023-10-15,Saint John's,0,Wartburg,2,"Waverly, Iowa",True
+35,2023-10-16,Gustavus Adolphus,1,Luther,1,"Decorah, Iowa",True
+36,2023-10-18,Loras,1,Luther,0,"Decorah, Iowa",True
+36,2023-10-18,Simpson,2,Dubuque,3,"Dubuque, Iowa",True
+36,2023-10-18,Central,1,Coe,0,"Cedar Rapids, Iowa",True
+36,2023-10-18,Buena Vista,1,Nebraska Wesleyan,2,"Lincoln, Neb.",True
+37,2023-10-21,Wartburg,3,Simpson,1,"Indianola, Iowa",True
+37,2023-10-21,Dubuque,3,Buena Vista,1,"Storm Lake, Iowa",True
+37,2023-10-21,Central,0,Nebraska Wesleyan,1,"Lincoln, Neb.",True
+37,2023-10-21,Luther,2,Wisconsin-Eau Claire,5,"Eau Claire, Wis.",True
+37,2023-10-21,Coe,0,Loras,1,"Dubuque, Iowa",True
+38,2023-10-24,Loras,2,Central,1,"Pella, Iowa",True
+38,2023-10-24,Bethel,1,Nebraska Wesleyan,4,"Lincoln, Neb.",True
+38,2023-10-24,Buena Vista,0,Wartburg,2,"Waverly, Iowa",True
+38,2023-10-24,Simpson,1,Coe,3,"Cedar Rapids, Iowa",True
+38,2023-10-24,Luther,0,Dubuque,1,"Dubuque, Iowa",True
+39,2023-10-26,Buena Vista,0,Hamline University,6,"Storm Lake, IA",True
+40,2023-10-28,Wartburg,,A-R-C First Round - BYE,,at Higher Seed,True
+40,2023-10-28,A-R-C First Round - BYE,,Loras,,at Higher Seed,True
+40,2023-10-28,Simpson,3,Luther,3,"Decorah, Iowa",True
+40,2023-10-28,Nebraska Wesleyan,0,Dubuque,1,"Dubuque, Iowa",True
+41,2023-11-01,Dubuque,0,Wartburg,1,"Waverly, Iowa",True
+41,2023-11-01,Luther,0,Loras,3,"Dubuque, Iowa",True
+42,2023-11-04,Wartburg,1,Loras,0,"Dubuque, Iowa",True
+43,2023-11-10,Gustavus Adolphus - NCAA First Round,3,Wartburg,1,"Waverly, Iowa",True

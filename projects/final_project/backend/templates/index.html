@@ -1,0 +1,58 @@
+</html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Sticky Footer Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 680px;
+  padding: 0 30px;
+}
+
+    </style>
+  </head>
+
+  <body>
+
+    <main role="main" class="container">
+      <h3 class="mt-5">American Rivers Conference</h1>
+      <h1 class="mb-5">Fantasy API</h1>
+      <p class="lead">This page shows how to use the ARC fantasy API. Let's dive in</p>
+      <h4 class="mt-2">Players</h4>
+        <p class="m-1"><a href="/players">Fetch all players for the latest season</a></p>
+        <p class="m-1"><a href="/players?data=previous">Fetch all players for the previous season</a></p>
+        <p class="m-1"><a href="/players?data=latest&college=Luther">Fetch all players from the Luther team in the latest season</a></p>
+        <p class="m-1"><a href="/players?data=latest&G=4">Fetch all players who scored 4 goals in the previous season</a></p>
+      <h4 class="mt-2">Goalkeepers</h4>
+        <p class="lead">The same idea is with goalkeepers just with a different route. Moreover, the reponse will now have goalkeeper specific data</p>
+        <p class="m-1"><a href="/goalkeepers">Fetch all goalkeepers for the latest season</a></p>
+        <p class="m-1"><a href="/goalkeepers?data=previous">Fetch all goalkeepers for the previous season</a></p>
+        <p class="m-1"><a href="/goalkeepers?data=latest&SV_percentage=1">Fetch all goalkeepers with a 100% save percentage</a></p>
+      <h6 class="lead mt-2 alert alert-primary" style="font-size: large;">Note: You can pretty much send any query parameters for both <i class="blockquote text-success">fixtures_results</i>, <i class="blockquote text-success">players</i> and <i class="blockquote text-success">goalkeepers</i> as long as they are keys in the JSON response given by links above</h6>
+      <h4 class="mt-2">Fixtures and Results</h4>
+        <p class="m-1"><a href="/fixtures_results">Fetch all fixtures and results</a></p>
+        <!-- <p class="m-1"><a href="/fixtures_results?Home_Team=Luther">Fetch fixtures and results for Luther</a> -->
+        </p>
+      <h4 class="mt-2">Users</h4>
+        <p class="m-1"><a href="/user/supreme">Fetch the user info of 'supreme'</a></p>
+    </main>
+  </body>
+</html>

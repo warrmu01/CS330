@@ -1,0 +1,2 @@
+class NeedATagException(Exception):
+    pass

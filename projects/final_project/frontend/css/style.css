@@ -1,0 +1,211 @@
+.bg {
+    /* The image used */
+    background-image: url("../images/background.jpeg");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* p { 
+    background-image: url("../images/text_background.jpeg"); 
+    background-repeat: repeat; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    margin-top: 200px; 
+    font-size: 120px; 
+    text-align: center; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    font-family: 'Steelfish Rg', 'helvetica neue', 
+             helvetica, arial, sans-serif; 
+    font-weight: 800; 
+    -webkit-font-smoothing: antialiased; 
+}  */
+h1.absolute.text-5xl.text-white.top-1\/2.left-1\/2.-translate-x-1\/2.-translate-y-1\/2 {
+  background-image: url(../images/text_background.jpeg);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 75px;
+  font-size: 120px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Steelfish Rg', 'helvetica neue', helvetica, arial, sans-serif;
+  font-weight: 800;
+  -webkit-font-smoothing: antialiased;
+}
+/* CSS for fixtures and results html */
+
+#fixturesTable th,
+#fixturesTable td {
+    padding: 8px; /* Adjust the padding as needed */
+
+}
+td.py-2.px-4.border-b.text-center {
+  width: 10px;
+}
+
+body.bg-gray-100.p-8 {
+  width: 1100px;
+  margin-left: 150px;
+}
+
+
+td#homeTeamLogo {
+  width: 60px;
+  height: auto;
+  margin-right: 16px;
+  margin-left: 115px;
+  text-align: center;
+}
+
+td#awayTeamLogo {
+  width: 80px;
+  height: auto;
+  margin-right: 16px;
+  margin-left: 115px;
+  text-align: center;
+}
+td#homeTeamScore {
+  background: black;
+  color: white;
+}
+td#awayTeamScore {
+  background: black;
+  color: white;
+}
+
+img.home-team-logo {
+  margin-right: 20px;
+  padding: 15px;
+}
+
+img.away-team-logo {
+  margin-right: 20px;
+  padding: 15px;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8fafc;
+  padding: 2rem;
+  padding: 150px; 
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 75%;
+  margin-left: 170px;
+  background-color: #ffffff;
+  border-collapse: collapse;
+  margin-top: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 1rem;
+  text-align: center; 
+  border-bottom: 1px solid #edf2f7;
+}
+
+.date-cell {
+  background-color: #edf2f7;
+  font-weight: bold;
+}
+
+
+.error-message {
+  color: #e53e3e;
+  margin-top: 1rem;
+}
+/* #fixturesTable td.text-center {
+    text-align: center;
+} */
+
+td.py-2.px-4.border-b.date-cell {
+  text-align: center;
+}
+
+.table-auto {
+  table-layout: auto;
+  margin-top: 120px;
+}
+
+        /* Add any additional styles specific to this page */
+body {
+          margin: 0;
+          padding: 0;
+      }
+
+      /* Adjust styles for the navigation bar */
+.navbar {
+          /* background-color: #ffffff; */
+          /* border-bottom: 1px solid #ddd; */
+          padding: 1rem;
+          position: fixed;
+          width: 100%;
+          z-index: 1000;
+      }
+
+      /* Adjust styles for the header and image */
+.header {
+          text-align: center;
+          margin-top: 80px; /* Adjust the margin based on your design */
+      }
+
+.header img {
+          width: 100%;
+          height: auto;
+      }
+
+      /* Add any additional styles for responsiveness */
+@media (max-width: 768px) {
+          /* Add responsive styles as needed */
+      }
+
+.mt-10.p-4 {
+        margin-top: 100px;
+        display: flex;
+}
+
+.font-bold {
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+select#teamSelector {
+  margin: 10px;
+}
+
+form#searchForm {
+  margin-bottom: 17px;
+}
+
+div#sideColumn {
+  margin-top: 80px;
+  margin-bottom: 20px;
+  padding-bottom: 70px;
+}
+
+h1.text-4xl.font-bold.mb-4 {
+  margin-top: 80px;
+}
+
+.grid.grid-cols-4.gap-2 {
+  padding: 10px;
+}
